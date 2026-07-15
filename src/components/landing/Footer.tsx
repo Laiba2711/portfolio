@@ -1,17 +1,16 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, ArrowUp, Heart } from "lucide-react";
+import { Github, Linkedin, ArrowUp, Heart } from "lucide-react";
 
 const LINKS = [
-  { icon: Github, href: "https://github.com/laiba", label: "GitHub" },
-  { icon: Linkedin, href: "https://linkedin.com/in/laiba", label: "LinkedIn" },
-  { icon: Mail, href: "mailto:laiba@example.com", label: "Email" },
+  { icon: Github, href: "https://github.com/laiba2711", label: "GitHub" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/laiba-rashid-571634290", label: "LinkedIn" },
 ];
 
 export function Footer() {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    document.getElementById("hero")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -31,10 +30,11 @@ export function Footer() {
         style={{
           background:
             "linear-gradient(180deg, transparent 0%, rgba(124,58,237,0.02) 100%)",
+          pointerEvents: "none",
         }}
       />
 
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="flex flex-col items-center gap-8">
           {/* Logo */}
           <motion.div

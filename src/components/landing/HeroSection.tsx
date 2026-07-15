@@ -64,31 +64,7 @@ export function HeroSection() {
       />
 
       {/* Hero Content */}
-      <div className="relative z-10 text-center max-w-5xl mx-auto px-6">
-        {/* Status badge */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex justify-center mb-8"
-        >
-          <div
-            className="flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold tracking-wider uppercase"
-            style={{
-              background: "rgba(34, 197, 94, 0.1)",
-              border: "1px solid rgba(34, 197, 94, 0.3)",
-              color: "#4ade80",
-              fontFamily: "JetBrains Mono, monospace",
-            }}
-          >
-            <span
-              className="w-2 h-2 rounded-full bg-green-400 animate-pulse"
-              style={{ boxShadow: "0 0 8px #4ade80" }}
-            />
-            Available for Work
-          </div>
-        </motion.div>
-
+      <div className="relative z-10 text-center max-w-5xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 py-8 sm:py-12 md:py-16">
         {/* Main Name */}
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
@@ -149,30 +125,30 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.7 }}
-          className="flex flex-wrap gap-4 justify-center mb-12"
+          className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center mb-8 sm:mb-12 px-4"
         >
           <a
             href="/resume.pdf"
             target="_blank"
             rel="noreferrer"
-            className="btn-primary flex items-center gap-2"
+            className="btn-primary flex items-center justify-center gap-2 text-sm sm:text-base"
           >
-            <Download size={18} />
-            Download Resume
+            <Download size={16} className="sm:w-[18px] sm:h-[18px]" />
+            <span className="whitespace-nowrap">Download Resume</span>
           </a>
           <button
             onClick={scrollToProjects}
-            className="btn-secondary flex items-center gap-2"
+            className="btn-secondary flex items-center justify-center gap-2 text-sm sm:text-base"
           >
-            <Eye size={18} />
-            View Projects
+            <Eye size={16} className="sm:w-[18px] sm:h-[18px]" />
+            <span className="whitespace-nowrap">View Projects</span>
           </button>
           <button
             onClick={scrollToContact}
-            className="btn-ghost flex items-center gap-2"
+            className="btn-ghost flex items-center justify-center gap-2 text-sm sm:text-base"
           >
-            <Briefcase size={18} />
-            Hire Me
+            <Briefcase size={16} className="sm:w-[18px] sm:h-[18px]" />
+            <span className="whitespace-nowrap">Hire Me</span>
           </button>
         </motion.div>
 
@@ -185,12 +161,12 @@ export function HeroSection() {
         >
           {[
             {
-              href: "https://github.com/laiba",
+              href: "https://github.com/laiba2711",
               icon: Github,
               label: "GitHub",
             },
             {
-              href: "https://linkedin.com/in/laiba",
+              href: "https://www.linkedin.com/in/laiba-rashid-571634290",
               icon: Linkedin,
               label: "LinkedIn",
             },
@@ -221,7 +197,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.0 }}
-          className="flex justify-center gap-8 md:gap-16"
+          className="grid grid-cols-3 gap-4 sm:flex sm:justify-center sm:gap-8 md:gap-16"
         >
           {[
             { value: "4+", label: "Projects" },
@@ -230,13 +206,13 @@ export function HeroSection() {
           ].map(({ value, label }) => (
             <div key={label} className="text-center">
               <div
-                className="text-2xl md:text-3xl font-black gradient-text"
+                className="text-xl sm:text-2xl md:text-3xl font-black gradient-text"
                 style={{ fontFamily: "Space Grotesk, sans-serif" }}
               >
                 {value}
               </div>
               <div
-                className="text-xs mt-1 tracking-wider uppercase"
+                className="text-[10px] sm:text-xs mt-1 tracking-wider uppercase"
                 style={{
                   color: "rgba(255,255,255,0.35)",
                   fontFamily: "JetBrains Mono, monospace",

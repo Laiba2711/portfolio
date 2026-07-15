@@ -220,9 +220,9 @@ export async function getSettings() {
   if (!settings) {
     return prisma.siteSettings.create({
       data: {
-        email: "laiba@example.com",
-        githubUrl: "https://github.com/laiba",
-        linkedinUrl: "https://linkedin.com/in/laiba",
+        email: "laibarashid2711@gmail.com",
+        githubUrl: "https://github.com/laiba2711",
+        linkedinUrl: "https://www.linkedin.com/in/laiba-rashid-571634290",
       },
     });
   }

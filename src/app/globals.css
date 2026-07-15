@@ -77,6 +77,35 @@
 }
 
 /* ═══════════════════════════════════════
+   RESPONSIVE CONTAINER UTILITIES
+═══════════════════════════════════════ */
+@layer components {
+  .container-px {
+    @apply px-4 sm:px-6 md:px-8 lg:px-6;
+  }
+
+  .container-py {
+    @apply py-8 sm:py-12 md:py-16 lg:py-20;
+  }
+
+  .container-py-lg {
+    @apply py-12 sm:py-16 md:py-24 lg:py-32;
+  }
+
+  .container-mb {
+    @apply mb-8 sm:mb-12 md:mb-16 lg:mb-20;
+  }
+
+  .responsive-heading {
+    @apply text-lg sm:text-xl md:text-2xl lg:text-3xl;
+  }
+
+  .responsive-text-base {
+    @apply text-xs sm:text-sm md:text-base;
+  }
+}
+
+/* ═══════════════════════════════════════
    GLASSMORPHISM UTILITIES
 ═══════════════════════════════════════ */
 .glass {
@@ -231,18 +260,26 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 14px 32px;
+  padding: clamp(10px, 2.5vw, 14px) clamp(16px, 4vw, 32px);
   background: linear-gradient(135deg, var(--purple) 0%, var(--blue) 100%);
   color: white;
   border: none;
   border-radius: 12px;
-  font-size: 15px;
+  font-size: clamp(13px, 2vw, 15px);
   font-weight: 600;
   font-family: "Space Grotesk", sans-serif;
   letter-spacing: 0.02em;
   cursor: none;
   transition: all 0.3s ease;
   overflow: hidden;
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .btn-primary {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
 }
 
 .btn-primary::before {
@@ -268,18 +305,26 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 13px 32px;
+  padding: clamp(10px, 2.5vw, 13px) clamp(16px, 4vw, 32px);
   background: transparent;
   color: white;
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 12px;
-  font-size: 15px;
+  font-size: clamp(13px, 2vw, 15px);
   font-weight: 600;
   font-family: "Space Grotesk", sans-serif;
   letter-spacing: 0.02em;
   cursor: none;
   transition: all 0.3s ease;
+  white-space: nowrap;
   backdrop-filter: blur(10px);
+}
+
+@media (max-width: 640px) {
+  .btn-secondary {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
 }
 
 .btn-secondary:hover {
@@ -294,16 +339,24 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 13px 32px;
+  padding: clamp(10px, 2.5vw, 13px) clamp(16px, 4vw, 32px);
   background: rgba(124, 58, 237, 0.1);
   color: var(--neon-purple);
   border: 1px solid rgba(124, 58, 237, 0.3);
   border-radius: 12px;
-  font-size: 15px;
+  font-size: clamp(13px, 2vw, 15px);
   font-weight: 600;
   font-family: "Space Grotesk", sans-serif;
   cursor: none;
   transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .btn-ghost {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
 }
 
 .btn-ghost:hover {
@@ -316,14 +369,26 @@
    SECTION STYLES
 ═══════════════════════════════════════ */
 .section-padding {
-  padding: 120px 0;
+  padding: clamp(60px, 12vw, 120px) 0;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding: clamp(40px, 10vw, 80px) 0;
+  }
 }
 
 .section-title {
-  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-size: clamp(1.75rem, 5vw, 3.5rem);
   font-weight: 700;
   letter-spacing: -0.03em;
   line-height: 1.1;
+}
+
+@media (max-width: 640px) {
+  .section-title {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+  }
 }
 
 .section-label {
@@ -593,15 +658,22 @@
 ═══════════════════════════════════════ */
 .form-input {
   width: 100%;
-  padding: 14px 18px;
+  padding: clamp(10px, 2.5vw, 14px) clamp(12px, 3vw, 18px);
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 12px;
   color: white;
-  font-size: 15px;
+  font-size: clamp(13px, 2vw, 15px);
   font-family: "Inter", sans-serif;
   transition: all 0.3s ease;
   outline: none;
+}
+
+@media (max-width: 640px) {
+  .form-input {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
 }
 
 .form-input::placeholder {

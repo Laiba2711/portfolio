@@ -30,7 +30,7 @@ export function Navbar() {
 
   return (
     <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 flex items-center justify-between w-full">
         {/* Logo */}
         <motion.a
           href="#hero"
@@ -82,18 +82,18 @@ export function Navbar() {
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="hidden md:flex items-center gap-3"
+          className="hidden md:flex items-center gap-2 lg:gap-3"
         >
           <a
             href="/resume.pdf"
             target="_blank"
-            className="btn-secondary text-sm py-2 px-5"
+            className="btn-secondary text-xs lg:text-sm py-2 px-3 lg:px-5"
           >
             Resume
           </a>
           <button
             onClick={() => scrollTo("#contact")}
-            className="btn-primary text-sm py-2 px-5"
+            className="btn-primary text-xs lg:text-sm py-2 px-3 lg:px-5"
           >
             Hire Me
           </button>
@@ -129,22 +129,22 @@ export function Navbar() {
             transition={{ duration: 0.3 }}
             className="md:hidden overflow-hidden glass-dark mt-2 mx-4 rounded-2xl"
           >
-            <div className="p-4 flex flex-col gap-1">
+            <div className="p-3 sm:p-4 flex flex-col gap-1">
               {navLinks.map((link) => (
                 <button
                   key={link.label}
                   onClick={() => scrollTo(link.href)}
-                  className="text-left px-4 py-3 rounded-xl text-sm font-medium transition-all hover:bg-white/5"
+                  className="text-left px-3 sm:px-4 py-2 sm:py-3 rounded-xl text-xs sm:text-sm font-medium transition-all hover:bg-white/5"
                   style={{ color: "rgba(255,255,255,0.7)" }}
                 >
                   {link.label}
                 </button>
               ))}
-              <div className="mt-3 pt-3 border-t border-white/5 flex gap-2">
-                <a href="/resume.pdf" target="_blank" className="btn-secondary text-sm py-2 flex-1 text-center">
+              <div className="mt-2 sm:mt-3 pt-2 sm:pt-3 border-t border-white/5 flex gap-2">
+                <a href="/resume.pdf" target="_blank" className="btn-secondary text-xs sm:text-sm py-1.5 sm:py-2 px-2 sm:px-3 flex-1 text-center">
                   Resume
                 </a>
-                <button onClick={() => scrollTo("#contact")} className="btn-primary text-sm py-2 flex-1">
+                <button onClick={() => scrollTo("#contact")} className="btn-primary text-xs sm:text-sm py-1.5 sm:py-2 px-2 sm:px-3 flex-1">
                   Hire Me
                 </button>
               </div>

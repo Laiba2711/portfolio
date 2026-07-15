@@ -10,7 +10,7 @@ const EXPERIENCES = [
     role: "Associate Software Engineer",
     period: "October 2025 – June 2026",
     current: true,
-    location: "Remote",
+    location: "Onsite, Lahore, Pakistan",
     description:
       "Developed and maintained scalable full-stack web applications for diverse clients. Designed and implemented RESTful APIs, deployed containerized apps using Docker, and consistently optimized application performance to meet SLA targets.",
     achievements: [
@@ -41,9 +41,9 @@ export function ExperienceSection() {
         }}
       />
 
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12">
         {/* Header */}
-        <div ref={headerRef} className="text-center mb-16">
+        <div ref={headerRef} className="text-center mb-12 sm:mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -72,7 +72,7 @@ export function ExperienceSection() {
               initial={{ opacity: 0, y: 40 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: i * 0.15, ease: [0.16, 1, 0.3, 1] }}
-              className="glass-card p-8 relative overflow-hidden"
+              className="glass-card p-6 sm:p-8 relative overflow-hidden"
             >
               {/* Gradient accent */}
               <div

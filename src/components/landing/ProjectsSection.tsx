@@ -192,7 +192,7 @@ function ProjectCard({
       </div>
 
       {/* Content */}
-      <div className="p-6">
+      <div className="p-4 sm:p-6">
         <h3
           className="text-xl font-bold mb-1 group-hover:text-white transition-colors"
           style={{ fontFamily: "Space Grotesk, sans-serif" }}
@@ -276,9 +276,9 @@ export function ProjectsSection() {
         }}
       />
 
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12">
         {/* Header */}
-        <div ref={headerRef} className="text-center mb-16">
+        <div ref={headerRef} className="text-center mb-12 sm:mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -308,7 +308,7 @@ export function ProjectsSection() {
         </div>
 
         {/* Projects grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
           {PROJECTS.map((project, i) => (
             <ProjectCard key={project.id} project={project} index={i} />
           ))}
@@ -325,7 +325,7 @@ export function ProjectsSection() {
             More projects available on GitHub
           </p>
           <a
-            href="https://github.com/laiba"
+            href="https://github.com/laiba2711"
             target="_blank"
             rel="noreferrer"
             className="btn-secondary inline-flex items-center gap-2"

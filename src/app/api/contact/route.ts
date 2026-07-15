@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
-import { sendContactEmail } from "@/lib/resend";
+import { sendContactEmail } from "@/lib/brevo";
 import { z } from "zod";
 
 const contactSchema = z.object({

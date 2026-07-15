@@ -50,7 +50,7 @@ export function ContactSection() {
       icon: Mail,
       label: "Email",
       value: "laibarashid2711@gmail.com",
-      href: "mailto:laiba@example.com",
+      href: "mailto:laibarashid2711@gmail.com",
       color: "#7c3aed",
     },
     {
@@ -81,9 +81,9 @@ export function ContactSection() {
         }}
       />
 
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12">
         {/* Header */}
-        <div ref={headerRef} className="text-center mb-16">
+        <div ref={headerRef} className="text-center mb-12 sm:mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -112,7 +112,7 @@ export function ContactSection() {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 sm:gap-8 max-w-5xl mx-auto">
           {/* Left — Info */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -121,7 +121,7 @@ export function ContactSection() {
             className="lg:col-span-2 flex flex-col gap-4"
           >
             {/* Availability card */}
-            <div className="glass-card p-6 gradient-border">
+            <div className="glass-card p-5 sm:p-6 gradient-border">
               <div className="flex items-center gap-3 mb-4">
                 <div
                   className="w-3 h-3 rounded-full bg-green-400 animate-pulse"
@@ -139,7 +139,7 @@ export function ContactSection() {
 
             {/* Contact info */}
             {INFO.map(({ icon: Icon, label, value, href, color }) => (
-              <div key={label} className="glass-card p-5 flex items-center gap-4">
+              <div key={label} className="glass-card p-4 sm:p-5 flex items-center gap-4">
                 <div
                   className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
                   style={{ background: `${color}15`, border: `1px solid ${color}30` }}
@@ -178,7 +178,7 @@ export function ContactSection() {
             transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-3"
           >
-            <div className="glass-card p-8">
+            <div className="glass-card p-6 sm:p-8">
               {submitted ? (
                 <motion.div
                   initial={{ opacity: 0, scale: 0.95 }}

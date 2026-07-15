@@ -23,7 +23,7 @@ const TIMELINE = [
     highlights: ["Full Stack", "Modern Web", "Best Practices"],
   },
   {
-    year: "2021–2025",
+    year: "2022–2026",
     title: "BS Information Technology",
     org: "Government College University",
     type: "edu",
@@ -59,9 +59,9 @@ export function AboutSection() {
         }}
       />
 
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12">
         {/* Header */}
-        <div ref={headerRef} className="text-center mb-16">
+        <div ref={headerRef} className="text-center mb-12 sm:mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -82,7 +82,7 @@ export function AboutSection() {
           </motion.h2>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-start">
           {/* Left — Bio Card */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -90,7 +90,7 @@ export function AboutSection() {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           >
             {/* Profile Card */}
-            <div className="glass-card p-8 mb-6 gradient-border">
+            <div className="glass-card p-6 sm:p-8 mb-6 gradient-border">
               {/* Avatar placeholder */}
               <div className="flex items-start gap-5 mb-6">
                 <div
@@ -119,13 +119,6 @@ export function AboutSection() {
                     <span className="tech-badge">
                       <MapPin size={10} />
                       Pakistan
-                    </span>
-                    <span
-                      className="tech-badge"
-                      style={{ color: "#4ade80", borderColor: "rgba(74,222,128,0.3)", background: "rgba(74,222,128,0.08)" }}
-                    >
-                      <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
-                      Available
                     </span>
                   </div>
                 </div>
@@ -158,7 +151,7 @@ export function AboutSection() {
                 { label: "Technologies", value: "15+" },
                 { label: "Months Exp.", value: "8+" },
               ].map(({ label, value }) => (
-                <div key={label} className="glass-card p-4 text-center">
+                <div key={label} className="glass-card p-4 sm:p-5 text-center">
                   <div
                     className="text-2xl font-black gradient-text mb-1"
                     style={{ fontFamily: "Space Grotesk, sans-serif" }}
@@ -181,9 +174,9 @@ export function AboutSection() {
 
           {/* Right — Timeline */}
           <div className="relative">
-            {/* Timeline vertical line */}
+            {/* Timeline vertical line — hidden on mobile */}
             <div
-              className="absolute left-6 top-0 bottom-0 w-px"
+              className="hidden sm:block absolute left-6 top-0 bottom-0 w-px"
               style={{
                 background:
                   "linear-gradient(180deg, transparent, rgba(124,58,237,0.5) 20%, rgba(37,99,235,0.5) 80%, transparent)",
@@ -201,11 +194,11 @@ export function AboutSection() {
                     delay: 0.3 + i * 0.15,
                     ease: [0.16, 1, 0.3, 1],
                   }}
-                  className="relative pl-16"
+                  className="relative sm:pl-16 pl-0"
                 >
-                  {/* Timeline dot */}
+                  {/* Timeline dot — hidden on mobile */}
                   <div
-                    className="absolute left-4 top-1 w-4 h-4 rounded-full -translate-x-1/2 border-2"
+                    className="hidden sm:block absolute left-4 top-1 w-4 h-4 rounded-full -translate-x-1/2 border-2"
                     style={{
                       background: typeColors[item.type],
                       borderColor: "var(--bg-primary)",
@@ -214,7 +207,7 @@ export function AboutSection() {
                   />
 
                   {/* Card */}
-                  <div className="glass-card p-5">
+                  <div className="glass-card p-4 sm:p-5\">
                     <div className="flex items-start justify-between gap-4 mb-3">
                       <div>
                         <span

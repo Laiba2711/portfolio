@@ -83,7 +83,7 @@ function SkillCard({
         ease: [0.16, 1, 0.3, 1],
       }}
       whileHover={{ y: -8, rotateY: 3 }}
-      className="glass-card p-6"
+      className="glass-card p-5 sm:p-6"
       style={{ transformStyle: "preserve-3d" }}
     >
       {/* Card header */}
@@ -176,9 +176,9 @@ export function SkillsSection() {
         }}
       />
 
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12">
         {/* Header */}
-        <div ref={headerRef} className="text-center mb-16">
+        <div ref={headerRef} className="text-center mb-12 sm:mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -211,7 +211,7 @@ export function SkillsSection() {
         </div>
 
         {/* Skills grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 sm:gap-6">
           {skillCategories.map((category, i) => (
             <SkillCard key={category.id} category={category} index={i} />
           ))}
