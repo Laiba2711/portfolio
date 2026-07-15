@@ -1,0 +1,230 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String    @unique
+  emailVerified DateTime?
+  image         String?
+  password      String?
+  role          Role      @default(ADMIN)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  @@map("users")
+}
+
+model Project {
+  id          String   @id @default(cuid())
+  title       String
+  slug        String   @unique
+  description String
+  longDesc    String?  @db.Text
+  problem     String?  @db.Text
+  solution    String?  @db.Text
+  architecture String? @db.Text
+  challenges  String?  @db.Text
+  timeline    String?
+  techStack   String[] @default([])
+  features    String[] @default([])
+  images      String[] @default([])
+  videoUrl    String?
+  githubUrl   String?
+  liveUrl     String?
+  featured    Boolean  @default(false)
+  published   Boolean  @default(true)
+  order       Int      @default(0)
+  category    String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("projects")
+}
+
+model Experience {
+  id           String   @id @default(cuid())
+  company      String
+  role         String
+  startDate    DateTime
+  endDate      DateTime?
+  current      Boolean  @default(false)
+  description  String?  @db.Text
+  achievements String[] @default([])
+  location     String?
+  order        Int      @default(0)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@map("experiences")
+}
+
+model Education {
+  id          String   @id @default(cuid())
+  institution String
+  degree      String
+  field       String?
+  startDate   DateTime
+  endDate     DateTime?
+  current     Boolean  @default(false)
+  gpa         String?
+  description String?  @db.Text
+  order       Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("educations")
+}
+
+model Certificate {
+  id          String   @id @default(cuid())
+  title       String
+  issuer      String
+  date        DateTime
+  credentialId String?
+  url         String?
+  imageUrl    String?
+  description String?
+  order       Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("certificates")
+}
+
+model Skill {
+  id        String     @id @default(cuid())
+  name      String
+  category  SkillCategory
+  level     Int        @default(80)
+  icon      String?
+  order     Int        @default(0)
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+
+  @@map("skills")
+}
+
+model Testimonial {
+  id        String   @id @default(cuid())
+  name      String
+  role      String
+  company   String?
+  content   String   @db.Text
+  avatar    String?
+  rating    Int      @default(5)
+  featured  Boolean  @default(false)
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("testimonials")
+}
+
+model Message {
+  id        String        @id @default(cuid())
+  name      String
+  email     String
+  subject   String
+  message   String        @db.Text
+  status    MessageStatus @default(UNREAD)
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
+
+  @@map("messages")
+}
+
+model HeroConfig {
+  id           String   @id @default(cuid())
+  name         String   @default("Laiba Rashid")
+  title        String   @default("Associate Software Engineer")
+  subtitle     String   @default("Full Stack Developer | MERN | PERN | Next.js | TypeScript")
+  typingTexts  String[] @default(["Associate Software Engineer", "Full Stack Developer", "Next.js Developer", "React Developer", "Backend Developer", "Node.js Developer"])
+  profileImage String?
+  resumeUrl    String?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@map("hero_configs")
+}
+
+model AboutConfig {
+  id        String   @id @default(cuid())
+  bio       String   @db.Text
+  avatarUrl String?
+  location  String?
+  available Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("about_configs")
+}
+
+model SeoConfig {
+  id          String   @id @default(cuid())
+  title       String   @default("Laiba Rashid | Full Stack Developer")
+  description String   @default("Associate Software Engineer specializing in Next.js, React, Node.js, and TypeScript")
+  keywords    String[] @default([])
+  ogImage     String?
+  twitterHandle String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("seo_configs")
+}
+
+model SiteSettings {
+  id          String   @id @default(cuid())
+  logo        String?
+  favicon     String?
+  email       String   @default("laiba@example.com")
+  githubUrl   String   @default("https://github.com/laiba")
+  linkedinUrl String   @default("https://linkedin.com/in/laiba")
+  twitterUrl  String?
+  resumeUrl   String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("site_settings")
+}
+
+model Analytics {
+  id        String   @id @default(cuid())
+  event     String
+  page      String?
+  userAgent String?
+  ip        String?
+  country   String?
+  createdAt DateTime @default(now())
+
+  @@map("analytics")
+}
+
+enum Role {
+  ADMIN
+  USER
+}
+
+enum SkillCategory {
+  FRONTEND
+  BACKEND
+  DATABASE
+  TOOLS
+  OTHER
+}
+
+enum MessageStatus {
+  UNREAD
+  READ
+  REPLIED
+  ARCHIVED
+}
