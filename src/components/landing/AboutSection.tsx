@@ -15,9 +15,9 @@ const TIMELINE = [
     highlights: ["REST APIs", "Docker", "Performance Optimization", "Client Projects"],
   },
   {
-    year: "2025",
+    year: "2024",
     title: "Web Development Certificate",
-    org: "March 2025",
+    org: "March 2024",
     type: "cert",
     description: "Completed professional web development certification covering modern full-stack technologies.",
     highlights: ["Full Stack", "Modern Web", "Best Practices"],

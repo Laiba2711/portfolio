@@ -38,7 +38,7 @@ export function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 sm:pt-32 md:pt-36 pb-16"
     >
       {/* 3D Galaxy Background */}
       <div className="absolute inset-0 z-0">
@@ -64,7 +64,7 @@ export function HeroSection() {
       />
 
       {/* Hero Content */}
-      <div className="relative z-10 text-center max-w-5xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 py-8 sm:py-12 md:py-16">
+      <div className="relative z-10 text-center max-w-5xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 py-6 sm:py-8">
         {/* Main Name */}
         <motion.h1
           initial={{ opacity: 0, y: 40 }}

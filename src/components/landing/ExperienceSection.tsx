@@ -6,10 +6,29 @@ import { Briefcase, CheckCircle2, ArrowUpRight } from "lucide-react";
 
 const EXPERIENCES = [
   {
+    company: "SmartWeb Labs Tech",
+    role: "Associate Software Engineer",
+    period: "Jun 2024 – Jun 2025",
+    current: false,
+    location: "Remote",
+    description:
+      "Built full-stack web applications using modern JavaScript technologies and cloud-ready tooling. Developed and maintained REST APIs with secure authentication and efficient database integration, while consistently delivering optimized, client-focused features.",
+    achievements: [
+      "Built full-stack web applications using React.js, Next.js, Node.js, and MongoDB",
+      "Developed REST APIs with secure authentication and efficient database integration",
+      "Containerized applications with Docker for consistent deployment environments",
+      "Optimized application performance for improved user experience",
+      "Delivered client-focused features aligned with business requirements",
+      "Worked with TypeScript across the full stack for type-safe development",
+    ],
+    tech: ["React.js", "Next.js", "Node.js", "Express.js", "MongoDB", "TypeScript", "Docker"],
+    color: "#0d9488",
+  },
+  {
     company: "Devflovv (Coding Pulse)",
     role: "Associate Software Engineer",
     period: "October 2025 – June 2026",
-    current: true,
+    current: false,
     location: "Onsite, Lahore, Pakistan",
     description:
       "Developed and maintained scalable full-stack web applications for diverse clients. Designed and implemented RESTful APIs, deployed containerized apps using Docker, and consistently optimized application performance to meet SLA targets.",
