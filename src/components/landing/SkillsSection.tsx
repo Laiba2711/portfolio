@@ -35,17 +35,25 @@ const skillCategories = [
     ],
   },
   {
-    id: "ai-apis",
-    label: "APIs & AI",
+    id: "ai-generative",
+    label: "AI & Generative AI",
     icon: Zap,
     color: "#60a5fa",
     skills: [
-      { name: "RESTful APIs", level: 90 },
-      { name: "Socket.IO", level: 80 },
-      { name: "OpenAI API", level: 85 },
-      { name: "LandingAI", level: 78 },
-      { name: "ElevenLabs", level: 80 },
-      { name: "Prompt Engineering", level: 82 },
+      { name: "Claude AI", level: 90 },
+      { name: "Anthropic API", level: 88 },
+      { name: "OpenAI API", level: 87 },
+      { name: "LLMs", level: 85 },
+      { name: "RAG", level: 83 },
+      { name: "LangChain", level: 82 },
+      { name: "LangGraph", level: 80 },
+      { name: "LlamaIndex", level: 78 },
+      { name: "MCP", level: 80 },
+      { name: "AI Agents", level: 85 },
+      { name: "Multi-Agent Systems", level: 82 },
+      { name: "Agentic Workflows", level: 83 },
+      { name: "Prompt Engineering", level: 88 },
+      { name: "Context Engineering", level: 85 },
     ],
   },
   {
@@ -227,8 +235,9 @@ export function SkillsSection() {
           className="mt-12 flex flex-wrap justify-center gap-3"
         >
           {[
-            "OpenAI", "LandingAI", "ElevenLabs", "Stripe", "Bitcart",
-            "Docker", "GitHub Actions", "Prisma", "Socket.IO", "FastAPI", "Laravel"
+            "Claude AI", "Anthropic API", "OpenAI API", "LangChain", "LangGraph",
+            "LlamaIndex", "MCP", "AI Agents", "RAG", "Prompt Engineering",
+            "Stripe", "Docker", "GitHub Actions", "Prisma", "FastAPI"
           ].map((tech) => (
             <span key={tech} className="tech-badge">
               {tech}
