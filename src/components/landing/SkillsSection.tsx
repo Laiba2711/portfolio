@@ -2,61 +2,63 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Code2, Server, Database, Wrench, Zap } from "lucide-react";
+import { Code2, Database, Wrench, Zap } from "lucide-react";
 
 const skillCategories = [
   {
-    id: "frontend",
-    label: "Frontend",
+    id: "languages",
+    label: "Languages & Frameworks",
     icon: Code2,
     color: "#c084fc",
     skills: [
-      { name: "React", level: 90 },
-      { name: "Next.js", level: 92 },
-      { name: "TypeScript", level: 88 },
       { name: "JavaScript", level: 92 },
-      { name: "Tailwind CSS", level: 90 },
-      { name: "Bootstrap", level: 82 },
-    ],
-  },
-  {
-    id: "backend",
-    label: "Backend",
-    icon: Server,
-    color: "#60a5fa",
-    skills: [
+      { name: "TypeScript", level: 88 },
+      { name: "React.js", level: 90 },
+      { name: "Next.js", level: 92 },
       { name: "Node.js", level: 88 },
-      { name: "Express", level: 86 },
-      { name: "REST API", level: 90 },
-      { name: "Socket.IO", level: 80 },
-      { name: "Authentication", level: 85 },
+      { name: "Express.js", level: 85 },
+      { name: "FastAPI", level: 75 },
+      { name: "PHP / Laravel", level: 78 },
     ],
   },
   {
     id: "database",
-    label: "Database",
+    label: "Databases & ORMs",
     icon: Database,
     color: "#34d399",
     skills: [
-      { name: "PostgreSQL", level: 85 },
+      { name: "PostgreSQL", level: 86 },
+      { name: "MySQL", level: 80 },
       { name: "MongoDB", level: 84 },
       { name: "Prisma", level: 88 },
-      { name: "Mongoose", level: 82 },
-      { name: "MySQL", level: 78 },
+      { name: "Sequelize", level: 76 },
     ],
   },
   {
-    id: "tools",
-    label: "Tools & DevOps",
+    id: "ai-apis",
+    label: "APIs & AI",
+    icon: Zap,
+    color: "#60a5fa",
+    skills: [
+      { name: "RESTful APIs", level: 90 },
+      { name: "Socket.IO", level: 80 },
+      { name: "OpenAI API", level: 85 },
+      { name: "LandingAI", level: 78 },
+      { name: "ElevenLabs", level: 80 },
+      { name: "Prompt Engineering", level: 82 },
+    ],
+  },
+  {
+    id: "payments-devops",
+    label: "Payments & DevOps",
     icon: Wrench,
     color: "#f59e0b",
     skills: [
-      { name: "Git & GitHub", level: 90 },
-      { name: "Docker", level: 78 },
-      { name: "Postman", level: 88 },
-      { name: "Stripe", level: 80 },
-      { name: "Vercel", level: 90 },
-      { name: "Render", level: 80 },
+      { name: "Stripe", level: 85 },
+      { name: "Bitcart", level: 78 },
+      { name: "Docker", level: 80 },
+      { name: "GitHub Actions", level: 78 },
+      { name: "CI/CD", level: 76 },
     ],
   },
 ];
@@ -225,8 +227,8 @@ export function SkillsSection() {
           className="mt-12 flex flex-wrap justify-center gap-3"
         >
           {[
-            "Bitcart", "OpenAI", "Stripe", "Cloudinary", "UploadThing",
-            "Resend", "Vercel", "Docker", "Prisma", "Socket.IO", "GSAP", "Three.js"
+            "OpenAI", "LandingAI", "ElevenLabs", "Stripe", "Bitcart",
+            "Docker", "GitHub Actions", "Prisma", "Socket.IO", "FastAPI", "Laravel"
           ].map((tech) => (
             <span key={tech} className="tech-badge">
               {tech}

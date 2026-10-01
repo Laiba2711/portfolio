@@ -115,9 +115,9 @@ export function HeroSection() {
           className="text-base md:text-lg mb-10 max-w-2xl mx-auto"
           style={{ color: "rgba(255,255,255,0.45)", lineHeight: 1.7 }}
         >
-          Building scalable full-stack applications with TypeScript, Next.js,
-          Node.js, PostgreSQL & MongoDB. Passionate about clean code and
-          stunning user experiences.
+          Associate Software Engineer with 2.5 years of industry experience
+          building full-stack web applications, SaaS platforms, AI integrations,
+          and payment systems.
         </motion.p>
 
         {/* CTA Buttons */}
@@ -200,9 +200,9 @@ export function HeroSection() {
           className="grid grid-cols-3 gap-4 sm:flex sm:justify-center sm:gap-8 md:gap-16"
         >
           {[
-            { value: "4+", label: "Projects" },
-            { value: "1+", label: "Year Exp." },
-            { value: "15+", label: "Technologies" },
+            { value: "3+", label: "Projects" },
+            { value: "2.5+", label: "Years Exp." },
+            { value: "20+", label: "Technologies" },
           ].map(({ value, label }) => (
             <div key={label} className="text-center">
               <div

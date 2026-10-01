@@ -6,21 +6,22 @@ import { User, MapPin, Calendar } from "lucide-react";
 
 const TIMELINE = [
   {
-    year: "2025–2026",
+    year: "Oct 2025–Present",
     title: "Associate Software Engineer",
-    org: "Devflovv (Coding Pulse)",
+    org: "RepairDesk",
     type: "work",
     description:
-      "Developed scalable full-stack applications with REST APIs, Docker deployment, performance optimization, and client-based development.",
-    highlights: ["REST APIs", "Docker", "Performance Optimization", "Client Projects"],
+      "Contributing to POS and repair shop management system features including device intake, ticket management, inventory control, and payment handling.",
+    highlights: ["POS Systems", "Ticket Management", "Inventory Control", "Payment Handling"],
   },
   {
-    year: "2024",
-    title: "Web Development Certificate",
-    org: "March 2024",
-    type: "cert",
-    description: "Completed professional web development certification covering modern full-stack technologies.",
-    highlights: ["Full Stack", "Modern Web", "Best Practices"],
+    year: "Oct 2024–Sep 2025",
+    title: "Associate Software Engineer",
+    org: "Devflovv / Coding Pulse",
+    type: "work",
+    description:
+      "Developed full-stack web applications and SaaS platforms. Implemented OpenAI APIs, LandingAI document parsing, and ElevenLabs voice-based AI conversational agents. Integrated Stripe and Bitcart payment gateways.",
+    highlights: ["Next.js", "OpenAI API", "ElevenLabs", "Stripe", "Docker"],
   },
   {
     year: "2022–2026",
@@ -118,7 +119,7 @@ export function AboutSection() {
                   <div className="flex flex-wrap gap-2">
                     <span className="tech-badge">
                       <MapPin size={10} />
-                      Pakistan
+                      Lahore, Pakistan
                     </span>
                   </div>
                 </div>
@@ -128,28 +129,27 @@ export function AboutSection() {
                 className="text-sm leading-relaxed mb-6"
                 style={{ color: "rgba(255,255,255,0.6)", lineHeight: 1.8 }}
               >
-                Associate Software Engineer with experience in building scalable
-                full-stack web applications using TypeScript, Next.js, React.js,
-                Node.js, PostgreSQL, MongoDB, and Docker. Skilled in designing
-                REST APIs, real-time systems, payment integrations, and
-                responsive user experiences.
+                Associate Software Engineer with 2.5 years of industry experience
+                building full-stack web applications, SaaS platforms, AI integrations,
+                and payment systems using TypeScript, Next.js, Node.js, PostgreSQL,
+                and Docker.
               </p>
               <p
                 className="text-sm leading-relaxed"
                 style={{ color: "rgba(255,255,255,0.5)", lineHeight: 1.8 }}
               >
-                Passionate about solving complex problems, optimizing
-                performance, and delivering production-ready solutions that make
-                a real impact.
+                Experienced in OpenAI API integrations, LandingAI document parsing,
+                ElevenLabs voice AI, and third-party payment gateways including
+                Stripe and Bitcart.
               </p>
             </div>
 
             {/* Quick stats */}
             <div className="grid grid-cols-3 gap-4">
               {[
-                { label: "Projects Built", value: "4+" },
-                { label: "Technologies", value: "15+" },
-                { label: "Months Exp.", value: "8+" },
+                { label: "Projects Built", value: "3+" },
+                { label: "Technologies", value: "20+" },
+                { label: "Years Exp.", value: "2.5+" },
               ].map(({ label, value }) => (
                 <div key={label} className="glass-card p-4 sm:p-5 text-center">
                   <div
