@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useResumeUrl } from "@/hooks/useResumeUrl";
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -14,6 +15,7 @@ const navLinks = [
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const resumeUrl = useResumeUrl();
 
 
   useEffect(() => {
@@ -84,13 +86,16 @@ export function Navbar() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="hidden md:flex items-center gap-2 lg:gap-3"
         >
-          <a
-            href="/resume.pdf"
-            target="_blank"
-            className="btn-secondary text-xs lg:text-sm py-2 px-3 lg:px-5"
-          >
-            Resume
-          </a>
+          {resumeUrl && (
+            <a
+              href={resumeUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="btn-secondary text-xs lg:text-sm py-2 px-3 lg:px-5"
+            >
+              Resume
+            </a>
+          )}
           <button
             onClick={() => scrollTo("#contact")}
             className="btn-primary text-xs lg:text-sm py-2 px-3 lg:px-5"
@@ -141,9 +146,11 @@ export function Navbar() {
                 </button>
               ))}
               <div className="mt-2 sm:mt-3 pt-2 sm:pt-3 border-t border-white/5 flex gap-2">
-                <a href="/resume.pdf" target="_blank" className="btn-secondary text-xs sm:text-sm py-1.5 sm:py-2 px-2 sm:px-3 flex-1 text-center">
-                  Resume
-                </a>
+                {resumeUrl && (
+                  <a href={resumeUrl} target="_blank" rel="noreferrer" className="btn-secondary text-xs sm:text-sm py-1.5 sm:py-2 px-2 sm:px-3 flex-1 text-center">
+                    Resume
+                  </a>
+                )}
                 <button onClick={() => scrollTo("#contact")} className="btn-primary text-xs sm:text-sm py-1.5 sm:py-2 px-2 sm:px-3 flex-1">
                   Hire Me
                 </button>

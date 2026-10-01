@@ -7,7 +7,7 @@ import { Briefcase, CheckCircle2, ArrowUpRight } from "lucide-react";
 const EXPERIENCES = [
   {
     company: "RepairDesk",
-    role: "Associate Software Engineer",
+    role: "Software Engineer",
     period: "Oct 2025 – Present",
     current: true,
     location: "Lahore, Pakistan",
@@ -26,7 +26,7 @@ const EXPERIENCES = [
   },
   {
     company: "Devflovv / Coding Pulse",
-    role: "Associate Software Engineer",
+    role: "Software Engineer",
     period: "Oct 2024 – Sep 2025",
     current: false,
     location: "Lahore, Pakistan",

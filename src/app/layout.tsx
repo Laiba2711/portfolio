@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     template: "%s | Laiba Rashid",
   },
   description:
-    "Associate Software Engineer specializing in Next.js, React, Node.js, TypeScript, PostgreSQL, and MongoDB. Building scalable full-stack web applications.",
+    "Software Engineer specializing in Next.js, React, Node.js, TypeScript, PostgreSQL, and MongoDB. Building scalable full-stack web applications.",
   icons: [
     { rel: "icon", url: "/favicon.svg", type: "image/svg+xml" },
     { rel: "shortcut icon", url: "/favicon.svg", type: "image/svg+xml" },
@@ -38,14 +38,14 @@ export const metadata: Metadata = {
     url: "https://laibarashid.dev",
     title: "Laiba Rashid | Full Stack Developer",
     description:
-      "Associate Software Engineer building scalable full-stack web applications.",
+      "Software Engineer building scalable full-stack web applications.",
     siteName: "Laiba Rashid Portfolio",
   },
   twitter: {
     card: "summary_large_image",
     title: "Laiba Rashid | Full Stack Developer",
     description:
-      "Associate Software Engineer building scalable full-stack web applications.",
+      "Software Engineer building scalable full-stack web applications.",
     creator: "@laibarashid",
   },
   robots: {

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Github, Linkedin, ArrowUp, Heart } from "lucide-react";
+import { useResumeUrl } from "@/hooks/useResumeUrl";
 
 const LINKS = [
   { icon: Github, href: "https://github.com/laiba2711", label: "GitHub" },
@@ -9,6 +10,7 @@ const LINKS = [
 ];
 
 export function Footer() {
+  const resumeUrl = useResumeUrl();
   const scrollToTop = () => {
     document.getElementById("hero")?.scrollIntoView({ behavior: "smooth" });
   };
@@ -92,19 +94,21 @@ export function Footer() {
             ))}
 
             {/* Resume */}
-            <a
-              href="/resume.pdf"
-              target="_blank"
-              rel="noreferrer"
-              className="flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold transition-all duration-300 hover:scale-105"
-              style={{
-                background: "rgba(124,58,237,0.12)",
-                border: "1px solid rgba(124,58,237,0.25)",
-                color: "#c084fc",
-              }}
-            >
-              Resume ↗
-            </a>
+            {resumeUrl && (
+              <a
+                href={resumeUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold transition-all duration-300 hover:scale-105"
+                style={{
+                  background: "rgba(124,58,237,0.12)",
+                  border: "1px solid rgba(124,58,237,0.25)",
+                  color: "#c084fc",
+                }}
+              >
+                Resume ↗
+              </a>
+            )}
           </motion.div>
 
           {/* Nav links */}

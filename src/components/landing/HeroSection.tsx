@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import { Download, Eye, ChevronDown, Briefcase } from "lucide-react";
 import { Github, Linkedin } from "lucide-react";
+import { useResumeUrl } from "@/hooks/useResumeUrl";
 
 const GalaxyScene = dynamic(
   () => import("@/components/three/GalaxyScene").then((m) => m.GalaxyScene),
@@ -12,7 +13,7 @@ const GalaxyScene = dynamic(
 );
 
 const TYPING_SEQUENCE = [
-  "Associate Software Engineer",
+  "Software Engineer",
   2000,
   "Full Stack Developer",
   1800,
@@ -27,6 +28,7 @@ const TYPING_SEQUENCE = [
 ];
 
 export function HeroSection() {
+  const resumeUrl = useResumeUrl();
   const scrollToProjects = () => {
     document.querySelector("#projects")?.scrollIntoView({ behavior: "smooth" });
   };
@@ -115,7 +117,7 @@ export function HeroSection() {
           className="text-base md:text-lg mb-10 max-w-2xl mx-auto"
           style={{ color: "rgba(255,255,255,0.45)", lineHeight: 1.7 }}
         >
-          Associate Software Engineer with 2.5 years of industry experience
+          Software Engineer with 2.5 years of industry experience
           building full-stack web applications, SaaS platforms, AI integrations,
           and payment systems.
         </motion.p>
@@ -127,15 +129,17 @@ export function HeroSection() {
           transition={{ duration: 0.6, delay: 0.7 }}
           className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center mb-8 sm:mb-12 px-4"
         >
-          <a
-            href="/resume.pdf"
-            target="_blank"
-            rel="noreferrer"
-            className="btn-primary flex items-center justify-center gap-2 text-sm sm:text-base"
-          >
-            <Download size={16} className="sm:w-[18px] sm:h-[18px]" />
-            <span className="whitespace-nowrap">Download Resume</span>
-          </a>
+          {resumeUrl && (
+            <a
+              href={resumeUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="btn-primary flex items-center justify-center gap-2 text-sm sm:text-base"
+            >
+              <Download size={16} className="sm:w-[18px] sm:h-[18px]" />
+              <span className="whitespace-nowrap">Download Resume</span>
+            </a>
+          )}
           <button
             onClick={scrollToProjects}
             className="btn-secondary flex items-center justify-center gap-2 text-sm sm:text-base"

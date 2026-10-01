@@ -146,9 +146,9 @@ model Message {
 model HeroConfig {
   id           String   @id @default(cuid())
   name         String   @default("Laiba Rashid")
-  title        String   @default("Associate Software Engineer")
+  title        String   @default("Software Engineer")
   subtitle     String   @default("Full Stack Developer | MERN | PERN | Next.js | TypeScript")
-  typingTexts  String[] @default(["Associate Software Engineer", "Full Stack Developer", "Next.js Developer", "React Developer", "Backend Developer", "Node.js Developer"])
+  typingTexts  String[] @default(["Software Engineer", "Full Stack Developer", "Next.js Developer", "React Developer", "Backend Developer", "Node.js Developer"])
   profileImage String?
   resumeUrl    String?
   createdAt    DateTime @default(now())
@@ -172,7 +172,7 @@ model AboutConfig {
 model SeoConfig {
   id          String   @id @default(cuid())
   title       String   @default("Laiba Rashid | Full Stack Developer")
-  description String   @default("Associate Software Engineer specializing in Next.js, React, Node.js, and TypeScript")
+  description String   @default("Software Engineer specializing in Next.js, React, Node.js, and TypeScript")
   keywords    String[] @default([])
   ogImage     String?
   twitterHandle String?

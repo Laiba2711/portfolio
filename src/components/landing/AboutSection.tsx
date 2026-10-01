@@ -7,7 +7,7 @@ import { User, MapPin, Calendar } from "lucide-react";
 const TIMELINE = [
   {
     year: "Oct 2025–Present",
-    title: "Associate Software Engineer",
+    title: "Software Engineer",
     org: "RepairDesk",
     type: "work",
     description:
@@ -16,7 +16,7 @@ const TIMELINE = [
   },
   {
     year: "Oct 2024–Sep 2025",
-    title: "Associate Software Engineer",
+    title: "Software Engineer",
     org: "Devflovv / Coding Pulse",
     type: "work",
     description:
@@ -114,7 +114,7 @@ export function AboutSection() {
                     className="text-sm mb-3"
                     style={{ color: "rgba(255,255,255,0.5)" }}
                   >
-                    Associate Software Engineer
+                    Software Engineer
                   </p>
                   <div className="flex flex-wrap gap-2">
                     <span className="tech-badge">
@@ -129,7 +129,7 @@ export function AboutSection() {
                 className="text-sm leading-relaxed mb-6"
                 style={{ color: "rgba(255,255,255,0.6)", lineHeight: 1.8 }}
               >
-                Associate Software Engineer with 2.5 years of industry experience
+                Software Engineer with 2.5 years of industry experience
                 building full-stack web applications, SaaS platforms, AI integrations,
                 and payment systems using TypeScript, Next.js, Node.js, PostgreSQL,
                 and Docker.
