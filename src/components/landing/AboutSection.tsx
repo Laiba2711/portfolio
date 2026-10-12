@@ -6,7 +6,7 @@ import { User, MapPin, Calendar } from "lucide-react";
 
 const TIMELINE = [
   {
-    year: "Oct 2025–Present",
+    year: "Oct 2025–Oct 2026",
     title: "Software Engineer",
     org: "RepairDesk",
     type: "work",

@@ -8,8 +8,8 @@ const EXPERIENCES = [
   {
     company: "RepairDesk",
     role: "Software Engineer",
-    period: "Oct 2025 – Present",
-    current: true,
+    period: "Oct 2025 – Oct 2026",
+    current: false,
     location: "Lahore, Pakistan",
     description:
       "Contributing to POS and repair shop management system features including device intake, ticket management, inventory control, and payment handling. Working with workflow automation and third-party API integrations to streamline operations end-to-end.",
